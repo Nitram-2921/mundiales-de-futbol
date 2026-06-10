@@ -1,69 +1,106 @@
+/* Fondo general */
 body{
-    background-color: rgb(129, 129, 129);
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+/* Color general del texto */
 *{
-  color: rgb(0, 0, 0);
-    
+    color: #222;
+    box-sizing: border-box;
 }
+
+/* Enlaces */
 body a{
     text-decoration: none;
-    margin: 35px;
+}
 
-}
-.indice{
-    background-color: #5d009b;
-    padding: 1px;
-    text-align: end;
-    display: flex;
-    align-items: center;
-}
-.indice a{
-    color: rgb(0, 0, 0);
-    border-radius: 25px;
-    border: 3px solid rgba(255, 196, 2, 0.959);
-    background-color: #eee8e8;
-    padding: 35px;
-    font-size: 20px;
-    text-decoration: none;
+/* Título */
+.titulo{
     text-align: center;
+    margin: 30px 0;
+    font-size: 40px;
 }
+
+/* Barra de navegación */
+.indice,
 .mundiales{
-    background-color: #5d009b;
-    padding: 1px;
-    text-align: end;
+    background: linear-gradient(90deg, #5d009b, #7d2ae8);
+    padding: 15px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Evita que se rompa en pantallas pequeñas */
 }
-.mundiales a{
-    color: rgb(0, 0, 0);
-    border-radius: 25px;
-    border: 3px solid rgba(255, 196, 2, 0.959);
-    background-color: #eee8e8;
-    padding: 35px;
-    font-size: 20px;
-    text-decoration: none;
+
+/* Botones de navegación */
+.indice a,
+.mundiales a,
+.Mundial1 a{
+    background-color: white;
+    border: 2px solid #ffc402;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     text-align: center;
 }
+
+/* Efecto al pasar el mouse */
+.indice a:hover,
+.mundiales a:hover,
+.Mundial1 a:hover{
+    background-color: #ffc402;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Logo del menú */
+.mundiales img,
+.indice img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Contenedor de mundiales */
 .contenedor{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 30px;
     justify-items: center;
 }
-.Mundial1{
-    background-color: #5d009b;
-    padding: 1px;
-    text-align: end;
-    display: flex;
-    align-items: center;
+
+/* Imágenes de los mundiales */
+.contenedor img{
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
-.Mundial1 a{
-      color: rgb(0, 0, 0);
-    border-radius: 25px;
-    border: 3px solid rgba(255, 196, 2, 0.959);
-    background-color: #eee8e8;
-    padding: 35px;
-    font-size: 20px;
-    text-decoration: none;
-    text-align: center;
+
+.contenedor img:hover{
+    transform: scale(1.05);
+}
+
+/* Tarjetas de los mundiales */
+.Mundial1{
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.Mundial1:hover{
+    transform: scale(1.03);
 }
