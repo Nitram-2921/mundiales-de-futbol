@@ -4,6 +4,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 /* Color general del texto */
@@ -103,4 +104,35 @@ body a{
 
 .Mundial1:hover{
     transform: scale(1.03);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.volver-arriba{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #5d009b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.volver-arriba:hover{
+    background-color: #7d2ae8;
+}
+footer{
+    background-color: #7d2ae8;  
+    color: white;
+    width: 100%;                 
+    padding: 30px 0;
+    margin-top: 50px;
 }
